@@ -36,7 +36,7 @@ if __name__ == '__main__':
     zmq_server()
 ```
 
-![REQ-REP](..\img\Basic_imgs\image-20211020112808034.png)
+![REQ-REP](img\Basic_imgs\image-20211020112808034.png)
 
 使用`REQ-REP`模式的`socket`发送和接受消息是需要遵循一定规律的。客户端首先使用`send()`发送消息，再用`recv()`接收，如此循环。如果打乱了这个顺序（如连续发送两次）则会报错。类似地，服务端必须先进行接收，后进行发送。
 
@@ -111,7 +111,7 @@ if __name__ == '__main__':
 
 这里的消息发布，只要没有发布完，就不会停。
 
-![PUB-SUB](..\img\Basic_imgs\image-20211020134322398.png)
+![PUB-SUB](img\Basic_imgs\image-20211020134322398.png)
 
 ### 订阅者代码
 
@@ -304,7 +304,7 @@ if __name__ == '__main__':
 
 这种模式主要针对在消费者能力不够的情况下，提供的多消费者并行消费解决方案。
 
-![PUSH-PULL](..\img\Basic_imgs\image-20211020163359728.png)
+![PUSH-PULL](img\Basic_imgs\image-20211020163359728.png)
 
 ## 正确的使用上下文
 
