@@ -9,3 +9,5 @@
 .. toctree::
    :maxdepth: 2
    :numbered:
+
+   doc/introduce.md
