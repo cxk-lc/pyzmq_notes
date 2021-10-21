@@ -11,3 +11,4 @@
    :numbered:
 
    doc/introduce.md
+   doc/basic.md
