@@ -12,3 +12,4 @@
 
    doc/introduce.md
    doc/basic.md
+   doc/advanced.md
