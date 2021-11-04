@@ -19,7 +19,7 @@
 import sphinx_rtd_theme
 from recommonmark.parser import CommonMarkParser
 
-project = 'Pyzmq Note'
+project = 'Pyzmq 学习笔记'
 copyright = '2021, CXK'
 author = 'CXK'
 
