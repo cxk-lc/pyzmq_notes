@@ -52,7 +52,9 @@ socket.bind('ipc://myserver.ipc')
 - `ZMQ`的`socket`可以和多个`socket`进行连接（如果`socket`类型允许的话）。`TCP`协议只能进行点对点的连接，而`ZMQ`则可以进行一对多（类似于无线广播）、多对多（类似于邮局）、多对一（类似于信箱），当然也包括一对一的情况。
 - `ZMQ`的`socket`可以发送消息给多个端点（扇出模型），或从多个端点中接收消息（扇入模型）。
 
-<img src="img/advanced_imgs/image-20211029143008595.png" alt="TCP sockers are 1 to 1" style="zoom:103.4%;" /> ![image-20211029143112406](img/advanced_imgs/image-20211029143112406.png)  
+
+
+![TCP sockers are 1 to 1](img/advanced_imgs/image-20211029143008595.png) ![ZMQ socket are N to N](img/advanced_imgs/image-20211029143112406.png)
 
 所以，向`ZMQ`的`socket`写入一个消息时可能会将消息发送给很多节点，相应的，`socket`又会从所有已建立的连接中接收消息。`recv()`方法使用了公平队列的算法来决定接收哪个连接的消息。
 
@@ -82,7 +84,7 @@ socket.bind('ipc://myserver.ipc')
 
 `ZMQ`不只是一个数据传输的工具，而是在现有通信协议之上建立起来的新架构。它的数据帧和现有的协议并不兼容。
 
-![HTTP request](img/advanced_imgs/image-20211104105547773.png) ![image-20211104105646304](img/advanced_imgs/image-20211104105646304.png)
+![HTTP request](img/advanced_imgs/image-20211104105547773.png) ![ZMQ request](img/advanced_imgs/image-20211104105646304.png)
 
 HTTP请求使用CR-LF（换行符）作为信息帧的间隔，而ZMQ则使用指定长度来定义帧。
 
