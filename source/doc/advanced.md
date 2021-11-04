@@ -82,7 +82,7 @@ socket.bind('ipc://myserver.ipc')
 
 `ZMQ`不只是一个数据传输的工具，而是在现有通信协议之上建立起来的新架构。它的数据帧和现有的协议并不兼容。
 
-![HTTP request](img/advanced_imgs/image-20211104105547773.png)![image-20211104105646304](img/advanced_imgs/image-20211104105646304.png)
+![HTTP request](img/advanced_imgs/image-20211104105547773.png) ![image-20211104105646304](img/advanced_imgs/image-20211104105646304.png)
 
 HTTP请求使用CR-LF（换行符）作为信息帧的间隔，而ZMQ则使用指定长度来定义帧。
 
